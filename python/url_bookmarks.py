@@ -57,4 +57,8 @@ urls.append('https://keras.io/layers/core/')
 for url in urls: 
     webbrowser.open(url, new=1)
 
+<<<<<<< HEAD
 print('Done')
+=======
+print('Done')
+>>>>>>> cd5c1bef1919b3faf436d6694b525328b960e30f
