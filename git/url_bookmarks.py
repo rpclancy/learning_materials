@@ -1,5 +1,11 @@
 import webbrowser
 
+"""
+Opens various urls in browser. Using to store and access git resources.
+Add new urls to URL list below.
+Run from terminal using: python url_bookmarks.py
+"""
+
 ###### URL LIST #######
 
 # Learning_materials github repository
