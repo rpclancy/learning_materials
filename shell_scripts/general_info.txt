@@ -1,0 +1,9 @@
+Running bash commands in terminal:
+bash filename: opens new bash shell to run bash script
+bash… do stuff… exit : can do lots of stuff  in new bash shell then go back to your original directory
+commands executed in a bash shell stay in that shell
+echo $SHLVL → shows what level of bash shells you’re on
+
+Running bash commands in jupyter notebook:
+! says is bash command
+e.g. !ls

@@ -1,0 +1,90 @@
+#Set up a repository:
+In browser, https://github.com/new makes new repository
+Either use "git init" to initialize directory as a git repository 
+Or use "git clone nameofrepository" to copy a current git directory
+
+#Set up git config
+git config --list to see configuration
+git config --global user.email “rclancy@uw.edu”
+git config --global user.name “Robin Clancy”
+git config --global color.ui auto
+git config --global core.editor nano -w     n.b. -w is about line wrapping
+git config --global core.autocrlf input   	n.b. this is for making line endings consistent
+git config --global core.autocrlf true		followed by this command
+
+#Stage changed files
+git add
+git add -A → for all files
+
+#Create snapshot
+git commit
+git commit -m “[msg]”
+Pull before commit to minimise conflict
+
+#Explore
+git status
+git log → shows commits in reverse chronological order
+git log --oneline → shows on one line nicely
+
+#Remotes
+git remote add origin https://github.com/rpclancy/git-practice.git → origin is name of remote
+git remote -v → shows fetch and push repositories hopefully
+remote keeps url of repository we want to interact with (push and pull)
+
+#Interacting with another repository
+git fetch [remote][branch]→ just gets metadata
+git pull [remote] [branch] → gets metadata and the actual data
+git push [remote] [branch]
+git push origin master
+Push stuff to server, pull stuff onto local
+git diff shows difference between server and local
+
+###### HAVENT FORMATTED FROM HERE
+
+#Working with branches
+Head: is where working directory is
+
+Get commit IDs from git log –oneline --graph
+then "git checkout"
+
+Need to make new branch to keep changes if go backward and end up in detached head state
+git checkout -b <new-branch-name> to keep commits branching from before master + moves head
+or =
+git branch fix (fix is the name of the branch)
+
+git branch -d fix (to delete branch, use capital D if you want to force this)
+
+git checkout HEAD~1 is used to check one step back
+
+To merge:
+move to branch that is going to remain and accept changes
+git merge fix (where fix is the name of some branch)
+
+### More git info
+git pull -f upstream master
+
+git diff filename
+
+git commit --amend
+
+git checkout → moves head
+git checkout ID
+git checkout HEAD~2
+git checkout -b branchname → gives new branch
+git checkout -- filename → Takes copy of file from a commit and puts it in working directory
+
+git branch -d branchname → deletes branch
+
+reset is for when changes are private
+git reset --soft: removes commit
+git reset --mixed: removes commit and unstages any changes made in that commit
+git reset --hard: also deletes changes from working directory
+
+git revert is for when changes are public
+Safer
+Basically just does a commit which undoes changes in previous commit.
+
+git stash →  keeps staged and unstaged changes
+git stash apply → brings changes back
+
+git merge master (merges from master to current commit)
