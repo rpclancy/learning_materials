@@ -1,4 +1,4 @@
-import webbrowser6
+import webbrowser
 
 """
 Opens various urls in browser. Using to store and access python resources.
